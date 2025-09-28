@@ -15,6 +15,10 @@ class Basket
     discount = @offer_calculators.sum { |offer| offer.apply(@items) }
     subtotal_after_discount = subtotal - discount
     delivery = @delivery_calculator.apply(subtotal: subtotal_after_discount)
-    (subtotal_after_discount + delivery).round(2)
+
+    total = subtotal_after_discount + delivery
+
+    # Banker's rounding (round half to even), 2 decimal places
+    total.round(2, BigDecimal::ROUND_HALF_EVEN).to_f
   end
 end

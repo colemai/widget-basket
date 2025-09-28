@@ -11,6 +11,8 @@ class Basket
   end
 
   def total
+    return 0.0 if @items.empty? # edge case: empty basket
+
     subtotal = @items.sum(&:price)
     discount = @offer_calculators.sum { |offer| offer.apply(@items) }
     subtotal_after_discount = subtotal - discount

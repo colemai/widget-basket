@@ -1,5 +1,5 @@
 class OfferCalculator
-  def apply(products)
+  def apply(_products)
     0 # default: no discount
   end
 end

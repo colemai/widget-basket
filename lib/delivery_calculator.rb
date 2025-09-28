@@ -1,5 +1,5 @@
-require "bigdecimal"
-require "bigdecimal/util"
+require 'bigdecimal'
+require 'bigdecimal/util'
 
 class DeliveryCalculator
   def initialize(rules)

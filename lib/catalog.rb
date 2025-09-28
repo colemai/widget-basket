@@ -1,6 +1,6 @@
 class Catalog
   def initialize(products)
-    @products = products.index_by(&:code)
+    @products = products.to_h { |p| [p.code, p] }
   end
 
   def find(code)

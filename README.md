@@ -6,15 +6,17 @@ This is a small Ruby proof-of-concept for a basket and checkout system. It calcu
 
 I've written a little setup.rb to set up the basic entities
 
-bundle install
-ruby setup.rb
+`bundle install`
+
+`ruby setup.rb`
 
 ## Testing
 
 RSpec tests are included under spec/. They reproduce the acceptance examples from the brief and ensure totals match exactly, including tricky rounding cases. Run them with:
 
-bundle install  
-bundle exec rspec
+`bundle install`
+
+`bundle exec rspec`
 
 ## Design Choices
 
